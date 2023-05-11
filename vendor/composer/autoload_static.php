@@ -36,6 +36,11 @@ class ComposerStaticInit3dbfc95f84ffb208ac0a9ff391416498
             'yii\\bootstrap5\\' => 15,
             'yii\\' => 4,
         ),
+        'k' => 
+        array (
+            'kartik\\date\\' => 12,
+            'kartik\\base\\' => 12,
+        ),
         'f' => 
         array (
             'frontend\\tests\\' => 15,
@@ -138,6 +143,14 @@ class ComposerStaticInit3dbfc95f84ffb208ac0a9ff391416498
         'yii\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
+        ),
+        'kartik\\date\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-datepicker/src',
+        ),
+        'kartik\\base\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base/src',
         ),
         'frontend\\tests\\' => 
         array (
