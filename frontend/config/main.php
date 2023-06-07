@@ -44,6 +44,12 @@ return [
             ],
         ],
 
+
     ],
+        'modules' => [
+            'profiling' => [
+                'class' => 'app\modules\profiling\Module',
+            ],
+        ],
     'params' => $params,
 ];
