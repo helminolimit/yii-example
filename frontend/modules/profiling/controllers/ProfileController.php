@@ -2,11 +2,29 @@
 
 namespace app\modules\profiling\controllers;
 
+use common\models\Profil;
+
 class ProfileController extends \yii\web\Controller
 {
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = Profil::find()
+            ->where([
+                'profilAgama' =>25
+                , 'profilJantina' => 47
+                , 'profilWarganegara' => 45
+            ])
+
+//            ->where([
+//                'profilAgama' => $idAgama
+//                , 'profilJantina' => $idJantina
+//                , 'profilWarganegara' => $idWarga
+//            ])
+            ->all();
+//        print_r($model);
+        return $this->render('index',[
+            'model' => $model
+        ]);
     }
 
     public function actionPrint()
