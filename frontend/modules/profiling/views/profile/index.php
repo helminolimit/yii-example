@@ -11,11 +11,24 @@
             <table class="table table-striped">
                 <tr>
                     <th style="width: 10px">#</th>
-                    <th>Task</th>
-                    <th>Progress</th>
-                    <th>Deadline</th>
+                    <th class="">Nama</th>
+                    <th>DOB</th>
+                    <th>IC No</th>
                     <th style="width: 40px">Label</th>
                 </tr>
+                <?php
+                    $i = 1;
+                    foreach($model as $data) {
+                        echo '<tr>
+                                <td>'.$i.'</td>
+                                <td>'.$data->profilNamaPertama.' '.$data->profilNamaAkhir.'</td>
+                                <td>'.$data->profilDOB.'</td>
+                                <td>'.($data->profilAccount == null ? null : $data->profilAccount->username).'</td>
+                                <td><span class="badge bg-red">55%</span></td>
+                            </tr>';
+                            $i++;
+                    }
+                ?>
                 <tr>
                     <td>1.</td>
                     <td>Update software</td>

@@ -3,11 +3,14 @@
 namespace app\modules\profiling\controllers;
 
 use common\models\Profil;
+use common\models\ProfilAccount;
 
 class ProfileController extends \yii\web\Controller
 {
+    public $layout = 'crypto';
     public function actionIndex()
     {
+        $this->layout = 'crypto';
         $model = Profil::find()
             ->where([
                 'profilAgama' =>25
@@ -23,7 +26,7 @@ class ProfileController extends \yii\web\Controller
             ->all();
 //        print_r($model);
         return $this->render('index',[
-            'model' => $model
+            'model' => $model,
         ]);
     }
 
